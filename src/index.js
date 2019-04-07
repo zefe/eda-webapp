@@ -1,10 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const App = () => (
-    <div>
-        <h1>Mira mama sin manos</h1>
-    </div>
-)
+import App from './App';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
