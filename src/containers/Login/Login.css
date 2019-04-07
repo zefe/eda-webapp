@@ -67,9 +67,25 @@
     margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+    .hero{
+        display: none;
+    }
+}
 
 @media (max-width: 425px) {
     .hero{
         display: none;
+    }
+    .login-form-container {
+        height: 400px;
+    }
+    .form {
+        height: 400px;
+    }
+    .login-form-container {
+        justify-content: flex-start;
+        justify-content: flex-start;
+        margin-top: -320px;
     }
 }
