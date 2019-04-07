@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import { hot } from 'react-hot-loader';
+import Login from './containers/Login/Login';
 
+import './global.css';
 class App extends React.Component {
     render() {
         return (
-            <div>
-                <h1>HELLO WORD</h1>
-            </div>
+            <Fragment>
+                <Login />
+            </Fragment>
         )
     }
 }
