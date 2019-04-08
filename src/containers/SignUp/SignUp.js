@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import HeaderSignUp from '../../components/Headers/HeaderSignUp';
 
-import './SignUp.css';
+import '../Login/Login.css';
 
 
 class Login extends Component {
