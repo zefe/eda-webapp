@@ -48,15 +48,13 @@
 
 
 @media (max-width: 768px) {
-    .login-header  {
-        width: 100%;        
+    .login-header  {    
         padding: 0 20px;
     }
 }
 
 @media (max-width: 425px) {
     .login-header  {
-        width: 100%; 
         background: #fff;     
     }    
     .login-header-button span{
@@ -65,11 +63,19 @@
 }
 
 @media (max-width: 320px) {
+    .container-login-header {
+        width: 100%;
+    }
     .login-header  {
-        width: 100%; 
-        background: #fff;     
-    }    
+        width: 100%;  
+    } 
+    .login-header-button {
+        width: 80%;
+    }  
     .login-header-button span{
         visibility: hidden;
+    }
+    .container-login-logo {
+        width: 80%;
     }
 }
