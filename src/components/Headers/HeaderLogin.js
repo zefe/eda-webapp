@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import './Header.css';
 
@@ -12,7 +13,7 @@ function Header(props) {
                 </div>
                 <div className="login-header-button">
                     <span>Don’t have an account?</span>
-                    <button className="btn btn-outline-primary">Sign Up</button>
+                    <Link to="/signup" className="btn btn-outline-primary">Sign Up</Link>
                 </div>
             </div>
         </div>

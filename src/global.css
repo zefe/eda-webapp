@@ -39,6 +39,11 @@ body {
     color: #1C8ADB;
     background-color: #fff;
     border-color: #1C8ADB;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
   }
   
   .btn.btn-outline-primary:not(:disabled):not(.disabled):hover {
