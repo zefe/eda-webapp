@@ -25,7 +25,9 @@
     margin-top: 180px;
     font-size: 36px;
 }
-
+.hero h2 {
+    font-size: 28px;
+}
 .form {
     width: 500px;
     height: 650px;
@@ -33,7 +35,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: rgba(28, 138, 219, 0.05);
+    background: rgba(28, 138, 219, 0.20);
 /*     
     -webkit-box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.25);
     -moz-box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.25);
@@ -49,8 +51,10 @@
     margin: 15px;
 }
 
-.form button {
+.form-button {
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
