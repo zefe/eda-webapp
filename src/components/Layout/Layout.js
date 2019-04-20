@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-
+import Header from '../../components/Headers/HeaderDashboard';
 function Layout(props) {
     return (
         <Fragment>
-            {/* Navlink */}
+            <Header />
             {props.children}
         </Fragment>
     )

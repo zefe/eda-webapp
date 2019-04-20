@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import UsersList from '../../components/UsersList/UsersList';
-import Header from '../../components/Headers/HeaderDashboard';
 import './TeamUsers.css';
 
 class TeamUsers extends Component {
@@ -74,12 +74,9 @@ class TeamUsers extends Component {
 	render() {
 		return (
 			<div>
-				<Header />
 				<div className="team-container">
 					<div className="team-button">
-						<a href="/team/new" className="btn btn-outline-primary" >
-							New User
-            			</a>
+						<Link to="/new/user" className="btn btn-outline-primary">New User</Link>
 					</div>
 				</div>
 

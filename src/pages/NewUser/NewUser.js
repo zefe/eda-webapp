@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import UserForm from '../../components/UserForm/UserForm';
-import Header from '../../components/Headers/HeaderDashboard';
 
 import './NewUser.css';
 
@@ -34,7 +33,6 @@ class NewUser extends Component {
     render() {
         return (
             <div>
-                <Header />
                 <div className="form-container">
                     <div className="form-user">
                         <UserForm
