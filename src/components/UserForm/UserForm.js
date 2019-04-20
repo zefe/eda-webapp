@@ -1,9 +1,7 @@
 import React from 'react';
-
 function UserForm(props) {
     return (
         <div>
-            <h1>Add a new user to the team</h1>
             <form action="" onSubmit={props.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="">FIRST NAME</label>
@@ -46,6 +44,9 @@ function UserForm(props) {
                         onChange={props.handleChange}
                         value={props.formValues.password} />
                 </div>
+                {props.error && (
+                    <p className="error">{props.error}</p>
+                )}
                 <div className="form-button" >
                     <button className="btn btn-primary" >Create</button>
                 </div>
