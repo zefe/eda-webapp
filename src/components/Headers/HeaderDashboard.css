@@ -33,6 +33,13 @@
     margin-left: 10px;
 }
 
+.navbar_brand { 
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}  
+
+
 .header-avatar {
     width: 90%;
     height: 90px;  

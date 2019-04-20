@@ -9,8 +9,10 @@ function Header(props) {
         <div className="container-header">
             <div className="header">
                 <div className="header-logo">
-                    <img src={logo} alt="logo" />
-                    <h1>EDA</h1>
+                    <Link to="/" className="navbar_brand">
+                        <img src={logo} alt="logo" />
+                        <h1>EDA</h1>
+                    </Link>
                 </div>
                 <div className="header-avatar">
                     <img src={person} alt="" width={40} />
