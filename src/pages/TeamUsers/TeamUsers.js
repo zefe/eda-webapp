@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import UsersList from '../../components/UsersList/UsersList';
 import { getUsers } from '../../services/api-service';
 import './TeamUsers.css';
+import Loading from '../../components/Loading/Loading';
 
 class TeamUsers extends Component {
 	state = {
@@ -30,7 +31,7 @@ class TeamUsers extends Component {
 	}
 	render() {
 		if (this.state.loading === true) {
-			return 'Loading...'
+			return <Loading />
 		}
 		if (this.state.data.length === 0) {
 			return (
