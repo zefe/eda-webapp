@@ -5,6 +5,20 @@ import './Login.css';
 
 
 class Login extends Component {
+
+    state = {
+        email: '',
+        password: ''
+    }
+    handleChange = (event) => {
+        event.preventDefault();
+        const { name, value } = event.target;
+        this.setState({ [name]: value })
+    }
+    handleSubmit = event => {
+        event.preventDefault()
+        console.log(this.state)
+    }
     render() {
         return (
             <Fragment>
@@ -17,17 +31,30 @@ class Login extends Component {
                         </div>
                         <div className="form">
                             <h1>Log in</h1>
-                            <form action="">
+                            <form action="" onSubmit={this.handleSubmit}>
                                 <div className="form-group">
                                     <label htmlFor="">EMAIL</label>
-                                    <input type="text" name="" id="" placeholder="juanita@example.com" />
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        id="email"
+                                        placeholder="juanita@example.com"
+                                        onChange={this.handleChange}
+                                        value={this.state.email}
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="">PASSWORD</label>
-                                    <input type="text" name="" id="" placeholder="Enter your password" />
+                                    <input
+                                        type="text"
+                                        name="password"
+                                        id="password"
+                                        placeholder="Enter your password"
+                                        onChange={this.handleChange}
+                                        value={this.state.password}
+                                    />
                                 </div>
                                 <div className="form-button">
-
                                     <button className="btn btn-primary">Sign in</button>
                                 </div>
                             </form>

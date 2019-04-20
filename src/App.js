@@ -5,6 +5,8 @@ import Login from './containers/Login/Login';
 import SignUp from './containers/SignUp/SignUp';
 import Layout from './components/Layout/Layout'
 
+import NewUser from './pages/NewUser/NewUser';
+import TeamUsers from './pages/TeamUsers/TeamUsers';
 
 import './global.css';
 function App() {
@@ -12,8 +14,9 @@ function App() {
         <BrowserRouter>
             <Layout>
                 <Switch>
-                    <Route exact path="/" component={Login} />
+                    <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={SignUp} />
+                    <Route exact path="/" component={TeamUsers} />
                 </Switch>
 
             </Layout>
