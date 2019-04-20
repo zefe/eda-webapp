@@ -8,6 +8,8 @@ import Layout from './components/Layout/Layout'
 import NewUser from './pages/NewUser/NewUser';
 import TeamUsers from './pages/TeamUsers/TeamUsers';
 
+import NotFound from './pages/NotFound/NotFound';
+
 import './global.css';
 function App() {
     return (
@@ -18,6 +20,8 @@ function App() {
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/" component={TeamUsers} />
                     <Route exact path="/new/user" component={NewUser} />
+                    <Route component={NotFound} />
+
                 </Switch>
 
             </Layout>
