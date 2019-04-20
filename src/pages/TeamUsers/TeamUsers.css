@@ -1,0 +1,28 @@
+
+.team-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.team-button {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 50px;
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.list {
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+
