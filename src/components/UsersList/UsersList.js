@@ -7,18 +7,18 @@ function UsersList(props) {
             <table>
                 <thead>
                     <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
+                        <th>USER</th>
+                        <th>ROL</th>
+                        <th>E-MAIL</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         props.users.map(user => {
                             return (
-                                <tr key={user.id}>
-                                    <td>{user.firstName}</td>
-                                    <td>{user.lastName}</td>
+                                <tr key={user._id}>
+                                    <td>{`${user.firstName}  ${user.lastName}`}</td>
+                                    <td>{user.rol}</td>
                                     <td>{user.email}</td>
                                 </tr>
                             )

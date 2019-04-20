@@ -11,3 +11,8 @@ export function signUp(user) {
     return fetch('http://localhost:3000/api/user/', options)
         .then(response => response.json())
 }
+
+export function getUsers() {
+    return fetch('http://localhost:3000/api/user/')
+        .then(response => response.json())
+}
