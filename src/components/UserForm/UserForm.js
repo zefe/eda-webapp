@@ -11,7 +11,7 @@ function UserForm(props) {
                         id="firstName"
                         placeholder="Juanita"
                         onChange={props.handleChange}
-                        value={props.formValues.firsName}
+                        value={props.formValues.firstName}
                     />
                 </div>
                 <div className="form-group">
@@ -48,7 +48,7 @@ function UserForm(props) {
                     <p className="error">{props.error}</p>
                 )}
                 <div className="form-button" >
-                    <button className="btn btn-primary" >Create</button>
+                    <button className="btn btn-primary" >Save</button>
                 </div>
             </form>
         </div>

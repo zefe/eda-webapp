@@ -1,0 +1,25 @@
+
+.row-user {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.edit-user-conatainer{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+    flex-wrap: wrap;
+}
+
+.badge-content {
+    width: 40%;
+}
+
+.edit-user-content {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}

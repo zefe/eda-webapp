@@ -44,7 +44,7 @@ class TeamUsers extends Component {
 			<div>
 				<div className="team-container">
 					<div className="team-button">
-						<Link to="/new/user" className="btn btn-outline-primary">New User</Link>
+						<Link to="/user/new" className="btn btn-outline-primary">New User</Link>
 					</div>
 				</div>
 

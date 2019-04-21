@@ -16,7 +16,7 @@ class Badge extends Component {
                 </div>
 
                 <div className="badge-section-info">
-                    <h3>ADD NEW {this.props.rol.toUpperCase()}</h3>
+                    <h3>{this.props.email}</h3>
                 </div>
             </div>
         );

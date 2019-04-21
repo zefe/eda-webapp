@@ -6,6 +6,7 @@ import SignUp from './containers/SignUp/SignUp';
 import Layout from './components/Layout/Layout'
 
 import NewUser from './pages/NewUser/NewUser';
+import EditUser from './pages/EditUser/EditUser';
 import TeamUsers from './pages/TeamUsers/TeamUsers';
 
 import NotFound from './pages/NotFound/NotFound';
@@ -19,7 +20,8 @@ function App() {
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/" component={TeamUsers} />
-                    <Route exact path="/new/user" component={NewUser} />
+                    <Route exact path="/user/new" component={NewUser} />
+                    <Route exact path="/users/:userId/edit" component={EditUser} />
                     <Route component={NotFound} />
 
                 </Switch>

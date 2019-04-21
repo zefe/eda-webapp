@@ -2,21 +2,40 @@ import React, { Component } from 'react';
 import UserForm from '../../components/UserForm/UserForm';
 import Badge from '../../components/Badge/Badge';
 import PageLoading from '../../components/Loading/Loading';
-import { signUp } from '../../services/api-service';
 
-import './NewUser.css';
 
-class NewUser extends Component {
+import { updateUser, getUser } from '../../services/api-service';
+
+import './EditUser.css';
+
+class EditUser extends Component {
     state = {
-        loading: false,
+        loading: true,
         error: null,
         form: {
             firstName: '',
             lastName: '',
             email: '',
-            password: '',
-            rol: 'member'
+            password: ''
         }
+    }
+
+    componentDidMount() {
+        this.setState({ loading: true, error: null })
+        getUser(this.props.match.params.userId)
+            .then(
+                (user) => this.setState({
+                    loading: false,
+                    form: user.data
+                })
+            )
+            .catch(
+                (error) => this.setState({
+                    loading: false,
+                    error: error
+                })
+            )
+
     }
 
     handleChange = e => {
@@ -32,8 +51,11 @@ class NewUser extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        let userId = this.props.match.params.userId;
+        let data = this.state.form;
+
         this.setState({ loading: true, error: null })
-        signUp(this.state.form)
+        updateUser(userId, data)
             .then(() => {
                 this.setState({ loading: false });
                 this.props.history.push('/')
@@ -45,13 +67,6 @@ class NewUser extends Component {
             })
     }
 
-    // handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     signUp(this.state.form)
-    //         .then(console.log)
-    //         .catch(console.error)
-    // }
-
 
     render() {
         if (this.state.loading) {
@@ -59,20 +74,20 @@ class NewUser extends Component {
         }
         return (
             <div className="row-user">
-                <div className="new-user-conatainer">
-                    <div className="badge-content">
-                        <div className="badge-header">
-                            <h1>ADD NEW USER</h1>
-                        </div>
+                <div className="edit-user-conatainer">
+                    <div className="badge-content"><div className="badge-header">
+                        <h1>EDIT USER INFO</h1>
+                    </div>
                         <Badge
                             firstName={this.state.form.firstName}
                             lastName={this.state.form.lastName}
                             email={this.state.form.email}
                             rol={this.state.form.rol}
+                            title={"EDIT USER"}
                         />
 
                     </div>
-                    <div className="new-user-content">
+                    <div className="edit-user-content">
                         <div className="">
                             <UserForm
                                 handleChange={this.handleChange}
@@ -89,4 +104,4 @@ class NewUser extends Component {
     }
 }
 
-export default NewUser;
+export default EditUser;
