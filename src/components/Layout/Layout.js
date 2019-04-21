@@ -3,7 +3,7 @@ import Header from '../../components/Headers/HeaderDashboard';
 function Layout(props) {
     return (
         <Fragment>
-            <Header />
+            {/* <Header /> */}
             {props.children}
         </Fragment>
     )
