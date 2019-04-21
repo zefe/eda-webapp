@@ -43,11 +43,13 @@ class TeamUsers extends Component {
 		return (
 			<div>
 				<div className="team-container">
+					<div className="team-title">
+						<h2>Manage users of your team</h2>
+					</div>
 					<div className="team-button">
 						<Link to="/user/new" className="btn btn-outline-primary">New User</Link>
 					</div>
 				</div>
-
 				<div className="table-container">
 					<div className="list">
 						<UsersList users={this.state.data} />
