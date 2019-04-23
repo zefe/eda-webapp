@@ -34,7 +34,12 @@ class Login extends Component {
             .then((response) => {
                 console.log(response)
                 this.setState({ loading: false })
-                this.props.history.push('/team')
+                if (response.message === 'User not found') {
+                    alert(response.message.toUpperCase())
+                } else {
+                    this.props.history.push('/team')
+
+                }
             })
             .catch((error) => {
                 console.log(error)
