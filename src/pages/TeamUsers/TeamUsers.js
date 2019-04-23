@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import UsersList from '../../components/UsersList/UsersList';
 import { getUsers } from '../../services/api-service';
+import Header from '../../components/Headers/HeaderDashboard';
 import './TeamUsers.css';
 import Loading from '../../components/Loading/Loading';
 
@@ -42,6 +43,7 @@ class TeamUsers extends Component {
 		}
 		return (
 			<div>
+				<Header />
 				<div className="team-container">
 					<div className="team-title">
 						<h2>Manage users of your team</h2>

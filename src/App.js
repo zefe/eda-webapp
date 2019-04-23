@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
-import Login from './containers/Login/Login';
-import SignUp from './containers/SignUp/SignUp';
+import Login from './pages/Login/Login';
+import SignUp from './pages/SignUp/SignUp';
 import Layout from './components/Layout/Layout'
 
 import NewUser from './pages/NewUser/NewUser';
@@ -17,13 +17,12 @@ function App() {
         <BrowserRouter>
             <Layout>
                 <Switch>
-                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/" component={Login} />
                     <Route exact path="/signup" component={SignUp} />
-                    <Route exact path="/" component={TeamUsers} />
+                    <Route exact path="/team" component={TeamUsers} />
                     <Route exact path="/user/new" component={NewUser} />
                     <Route exact path="/users/:userId/edit" component={EditUser} />
                     <Route component={NotFound} />
-
                 </Switch>
 
             </Layout>

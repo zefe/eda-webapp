@@ -45,17 +45,6 @@
     margin-top: -80px;
     margin-bottom: 20px;
 }
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-}
-
-.form-button {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
 
 @media (max-width: 768px) {
     .hero{
