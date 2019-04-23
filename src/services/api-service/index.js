@@ -33,3 +33,17 @@ export function updateUser(id, user) {
     return fetch(`http://localhost:3000/api/user/${id}`, options)
         .then(response => response.json())
 }
+
+//Authenticate User
+
+export function authenticateUser(user) {
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    return fetch(`http://localhost:3000/api/auth/login/`, options)
+        .then(response => response.json())
+}

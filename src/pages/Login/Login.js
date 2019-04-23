@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import HeaderLogin from '../../components/Headers/HeaderLogin';
+import LoginForm from '../../components/LoginForm/LoginForm';
+import PageLoading from '../../components/Loading/Loading';
+import { authenticateUser } from '../../services/api-service';
 
 import './Login.css';
 
@@ -7,19 +10,41 @@ import './Login.css';
 class Login extends Component {
 
     state = {
-        email: '',
-        password: ''
+        loading: false,
+        error: null,
+        form: {
+            email: '',
+            password: ''
+        }
     }
-    handleChange = (event) => {
-        event.preventDefault();
+    handleChange = (e) => {
+        e.preventDefault();
         const { name, value } = event.target;
-        this.setState({ [name]: value })
+        this.setState({
+            form: {
+                ...this.state.form,
+                [name]: value
+            }
+        })
     }
     handleSubmit = event => {
-        event.preventDefault()
-        console.log(this.state)
+        event.preventDefault();
+        this.setState({ loading: true, error: null })
+        authenticateUser(this.state.form)
+            .then((response) => {
+                console.log(response)
+                this.setState({ loading: false })
+                this.props.history.push('/team')
+            })
+            .catch((error) => {
+                console.log(error)
+                this.setState({ loading: false, error: error })
+            })
     }
     render() {
+        if (this.state.loading) {
+            return <PageLoading />;
+        }
         return (
             <Fragment>
                 <HeaderLogin />
@@ -31,33 +56,12 @@ class Login extends Component {
                         </div>
                         <div className="form">
                             <h1>Log in</h1>
-                            <form action="" onSubmit={this.handleSubmit}>
-                                <div className="form-group">
-                                    <label htmlFor="">EMAIL</label>
-                                    <input
-                                        type="text"
-                                        name="email"
-                                        id="email"
-                                        placeholder="juanita@example.com"
-                                        onChange={this.handleChange}
-                                        value={this.state.email}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="">PASSWORD</label>
-                                    <input
-                                        type="text"
-                                        name="password"
-                                        id="password"
-                                        placeholder="Enter your password"
-                                        onChange={this.handleChange}
-                                        value={this.state.password}
-                                    />
-                                </div>
-                                <div className="form-button">
-                                    <button className="btn btn-primary">Sign in</button>
-                                </div>
-                            </form>
+                            <LoginForm
+                                handleChange={this.handleChange}
+                                formValues={this.state.form}
+                                handleSubmit={this.handleSubmit}
+                                eror={this.state.error}
+                            />
                         </div>
                     </div>
                 </div>

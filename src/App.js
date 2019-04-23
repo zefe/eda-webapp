@@ -19,7 +19,7 @@ function App() {
                 <Switch>
                     <Route exact path="/" component={Login} />
                     <Route exact path="/signup" component={SignUp} />
-                    <Route exact path="/sss" component={TeamUsers} />
+                    <Route exact path="/team" component={TeamUsers} />
                     <Route exact path="/user/new" component={NewUser} />
                     <Route exact path="/users/:userId/edit" component={EditUser} />
                     <Route component={NotFound} />
