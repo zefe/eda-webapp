@@ -30,33 +30,6 @@ function UsersList(props) {
                 })
             }
         </div>
-
-        // <div className="tabla">
-        //     <table>
-        //         <thead>
-        //             <tr>
-        //                 <th>USER</th>
-        //                 <th>ROL</th>
-        //                 <th>E-MAIL</th>
-        //                 <th>ACTIONS</th>
-        //             </tr>
-        //         </thead>
-        //         <tbody>
-        //             {
-        //                 props.users.map(user => {
-        //                     return (
-        //                         <tr key={user._id}>
-        //                             <td><Gravatar className="user-avatar" email={user.email} />{`${user.firstName}  ${user.lastName}`}</td>
-        //                             <td>{user.rol}</td>
-        //                             <td>{user.email}</td>
-        //                             <td><Link to={`/users/${user._id}/edit`} ><PeopleIcon /></Link></td>
-        //                         </tr>
-        //                     )
-        //                 })
-        //             }
-        //         </tbody>
-        //     </table>
-        // </div>
     )
 }
 
