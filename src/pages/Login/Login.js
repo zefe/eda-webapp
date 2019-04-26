@@ -28,21 +28,25 @@ class Login extends Component {
         })
     }
     handleSubmit = event => {
-        event.preventDefault();
         this.setState({ loading: true, error: null })
+        event.preventDefault();
         authenticateUser(this.state.form)
             .then((response) => {
-                console.log(response)
                 this.setState({ loading: false })
-                if (response.message === 'User not found') {
-                    alert(response.message.toUpperCase())
-                } else if (response.message === 'Incorrect Password') {
-                    alert(response.message.toUpperCase())
-                } else {
-                    this.props.history.push('/team')
+                console.log(response)
+                let message = response.message;
+                switch (message) {
+                    case 'User not found':
+                        this.setState({ message: message })
+                        break;
+                    case 'Incorrect Password':
+                        this.setState({ message: message })
+                        break;
+                    default:
+                        if (response.token !== null || response.token !== undefined) {
+                            this.props.history.push('/team')
+                        }
                 }
-
-
             })
             .catch((error) => {
                 console.log(error)
@@ -56,6 +60,11 @@ class Login extends Component {
         return (
             <Fragment>
                 <HeaderLogin />
+                {this.state.message && (
+                    <div className="notification-login">
+                        <span className="message-login">{this.state.message}</span>
+                    </div>
+                )}
                 <div className="login-wrapper">
                     <div className="login-container">
                         <div className="hero">
@@ -68,7 +77,7 @@ class Login extends Component {
                                 handleChange={this.handleChange}
                                 formValues={this.state.form}
                                 handleSubmit={this.handleSubmit}
-                                eror={this.state.error}
+                                message={this.state.message}
                             />
                         </div>
                     </div>
