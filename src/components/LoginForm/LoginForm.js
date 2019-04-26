@@ -7,12 +7,13 @@ function LoginForm(props) {
             <div className="form-group">
                 <label htmlFor="">EMAIL</label>
                 <input
-                    type="text"
+                    type="email"
                     name="email"
                     id="email"
                     placeholder="juanita@example.com"
                     onChange={props.handleChange}
                     value={props.formValues.email}
+                    required
                 />
             </div>
             <div className="form-group">
@@ -24,6 +25,7 @@ function LoginForm(props) {
                     placeholder="Enter your password"
                     onChange={props.handleChange}
                     value={props.formValues.password}
+                    required
                 />
             </div>
             <div className="form-button">
