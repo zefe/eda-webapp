@@ -34,9 +34,10 @@ class NewUser extends Component {
         e.preventDefault();
         this.setState({ loading: true, error: null })
         signUp(this.state.form)
-            .then(() => {
+            .then((response) => {
+                console.log(response)
                 this.setState({ loading: false });
-                this.props.history.push('/')
+                this.props.history.push('/team')
             })
             .catch((error) => {
                 console.log(error);
@@ -44,13 +45,6 @@ class NewUser extends Component {
                 console.log
             })
     }
-
-    // handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     signUp(this.state.form)
-    //         .then(console.log)
-    //         .catch(console.error)
-    // }
 
 
     render() {
