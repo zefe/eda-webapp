@@ -10,22 +10,26 @@ import EditUser from './pages/EditUser/EditUser';
 import TeamUsers from './pages/TeamUsers/TeamUsers';
 
 import NotFound from './pages/NotFound/NotFound';
+import Navigation from './components/Navigation/Navigation';
+import Header from './components/Headers/HeaderDashboard';
+import Projects from './pages/Projects/Projects';
 
 import './global.css';
 function App() {
     return (
         <BrowserRouter>
-            <Layout>
-                <Switch>
-                    <Route exact path="/" component={Login} />
-                    <Route exact path="/signup" component={SignUp} />
+            <Switch>
+                <Route exact path="/" component={Login} />
+                <Route exact path="/signup" component={SignUp} />
+                <Layout>
+                    <Header />
+                    <Navigation />
+                    <Route exact path="/projects" component={Projects} />
                     <Route exact path="/team" component={TeamUsers} />
                     <Route exact path="/user/new" component={NewUser} />
                     <Route exact path="/users/:userId/edit" component={EditUser} />
-                    <Route component={NotFound} />
-                </Switch>
-
-            </Layout>
+                </Layout>
+            </Switch>
         </BrowserRouter>
     )
 }
