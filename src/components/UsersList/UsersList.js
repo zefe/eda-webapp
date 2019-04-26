@@ -18,7 +18,7 @@ function UsersList(props) {
                             <span className="card-overlay">
 
                                 <Link to={`/users/${user._id}/edit`} >
-                                    <span class="card-details"><PeopleIcon />
+                                    <span className="card-details"><PeopleIcon />
                                         <span className="card-name" >{`${user.firstName}  ${user.lastName}`}</span>
 
                                     </span>

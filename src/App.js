@@ -17,9 +17,9 @@ function App() {
         <BrowserRouter>
             <Layout>
                 <Switch>
-                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/" component={Login} />
                     <Route exact path="/signup" component={SignUp} />
-                    <Route exact path="/" component={TeamUsers} />
+                    <Route exact path="/team" component={TeamUsers} />
                     <Route exact path="/user/new" component={NewUser} />
                     <Route exact path="/users/:userId/edit" component={EditUser} />
                     <Route component={NotFound} />

@@ -36,10 +36,13 @@ class Login extends Component {
                 this.setState({ loading: false })
                 if (response.message === 'User not found') {
                     alert(response.message.toUpperCase())
+                } else if (response.message === 'Incorrect Password') {
+                    alert(response.message.toUpperCase())
                 } else {
                     this.props.history.push('/team')
-
                 }
+
+
             })
             .catch((error) => {
                 console.log(error)

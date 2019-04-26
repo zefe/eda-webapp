@@ -28,12 +28,15 @@ function UserForm(props) {
                 </div>
                 <div className="form-group">
                     <label htmlFor="">EMAIL</label>
-                    <input type="text"
+                    <input type="email"
                         name="email"
                         id="email"
                         placeholder="juanita@example.com"
                         onChange={props.handleChange}
                         value={props.formValues.email} />
+                    {props.errors && (
+                        <span className="error">{props.errors.email}</span>
+                    )}
                 </div>
                 <div className="form-group">
                     <label htmlFor="">PASSWORD</label>
@@ -44,10 +47,10 @@ function UserForm(props) {
                         placeholder="Enter your password"
                         onChange={props.handleChange}
                         value={props.formValues.password} />
+                    {props.errors && (
+                        <span className="error">{props.errors.incomplete}</span>
+                    )}
                 </div>
-                {props.error && (
-                    <p className="error">{props.error}</p>
-                )}
                 <div className="form-button" >
                     <button className="btn btn-primary" >Save</button>
                 </div>
