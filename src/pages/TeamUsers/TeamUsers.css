@@ -21,13 +21,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 .list {
-    margin-top: 50px;
     box-sizing: border-box;
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    width: 80%;
+    background: rgba(28, 138, 219, 0.46);
 }
 
 

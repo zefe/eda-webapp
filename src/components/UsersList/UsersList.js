@@ -10,7 +10,7 @@ function UsersList(props) {
             {
                 props.users.map(user => {
                     return (
-                        <div className="card-item">
+                        <div className="card-item" key={user._id}>
                             <figure className="card-image">
                                 <Gravatar className="user-avatar" email={user.email} />
                                 <span className="card-name" >{`${user.firstName}  ${user.lastName}`}</span>
