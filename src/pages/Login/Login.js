@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import HeaderLogin from '../../components/Headers/HeaderLogin';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import PageLoading from '../../components/Loading/Loading';
-import { authenticateUser } from '../../services/api-service';
+import { loginUser } from '../../services/AuthService';
 
 import './Login.css';
 
@@ -30,7 +30,7 @@ class Login extends Component {
     handleSubmit = event => {
         this.setState({ loading: true, error: null })
         event.preventDefault();
-        authenticateUser(this.state.form)
+        loginUser(this.state.form)
             .then((response) => {
                 this.setState({ loading: false })
                 console.log(response)

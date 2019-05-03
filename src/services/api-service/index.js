@@ -34,16 +34,11 @@ export function updateUser(id, user) {
         .then(response => response.json())
 }
 
-//Authenticate User
 
-export function authenticateUser(user) {
+export function getUserInfo() {
     const options = {
-        method: 'POST',
-        body: JSON.stringify(user),
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        credentials: 'include'
     }
-    return fetch(`http://localhost:3000/api/auth/login/`, options)
+    return fetch('http://localhost:3000/api/user/profile', options)
         .then(response => response.json())
 }

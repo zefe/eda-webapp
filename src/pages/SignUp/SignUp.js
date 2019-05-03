@@ -38,6 +38,7 @@ class SignUp extends Component {
         this.setState({ loading: true, error: null })
         signUp(this.state.form)
             .then(response => {
+                console.log(response)
                 let message = response.message;
                 switch (message) {
                     case 'User data is not valid':
