@@ -58,7 +58,7 @@ class EditUser extends Component {
         updateUser(userId, data)
             .then(() => {
                 this.setState({ loading: false });
-                this.props.history.push('/')
+                this.props.history.push('/team')
             })
             .catch((error) => {
                 console.log(error);
