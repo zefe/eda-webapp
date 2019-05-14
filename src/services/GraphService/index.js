@@ -5,7 +5,11 @@ export function newGraph(graph) {
         method: 'POST',
         body: JSON.stringify(graph),
         headers: {
-            'Content-Type': 'application/json'
+
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "*"
         }
     }
     return fetch('https://eda-api.herokuapp.com/api/graph/', options)

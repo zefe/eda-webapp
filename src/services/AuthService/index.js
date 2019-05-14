@@ -6,7 +6,11 @@ export function loginUser(credentials) {
         method: 'POST',
         body: JSON.stringify(credentials),
         headers: {
-            'Content-Type': 'application/json'
+
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "*"
         },
         credentials: 'include',
         body: JSON.stringify(credentials)

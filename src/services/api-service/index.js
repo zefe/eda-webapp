@@ -6,7 +6,10 @@ export function signUp(user) {
         method: 'POST',
         body: JSON.stringify(user),
         headers: {
-            'Content-Type': 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "*"
         }
     }
     return fetch(uri, options)
@@ -28,7 +31,11 @@ export function updateUser(id, user) {
         method: 'PUT',
         body: JSON.stringify(user),
         headers: {
-            'Content-Type': 'application/json'
+
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "*"
         }
     }
     return fetch(`${uri}${id}`, options)
