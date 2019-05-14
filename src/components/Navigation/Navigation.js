@@ -14,7 +14,7 @@ function Navigation() {
                             <NavLink to="/team" activeClassName="is-selected">Team</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/notfound" activeClassName="is-selected">LINK</NavLink>
+                            <NavLink to="/graphs" activeClassName="is-selected">Graphs</NavLink>
                         </li>
                         <li>
                             <NavLink to="/notfound" activeClassName="is-selected">LINK</NavLink>

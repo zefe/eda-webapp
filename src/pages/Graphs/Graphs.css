@@ -1,0 +1,18 @@
+
+.graphs-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    margin-top: 50px;
+}
+.graphs-title {
+    width: 40%;
+}
+.graphs-button {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}

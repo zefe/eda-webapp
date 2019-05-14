@@ -11,6 +11,6 @@ export function loginUser(credentials) {
         credentials: 'include',
         body: JSON.stringify(credentials)
     }
-    return fetch(`http://localhost:3000/api/auth/login/`, options)
+    return fetch(`https://eda-api.herokuapp.com/api/auth/login/`, options)
         .then(response => response.json())
 }

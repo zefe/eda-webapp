@@ -13,6 +13,8 @@ import NotFound from './pages/NotFound/NotFound';
 import Navigation from './components/Navigation/Navigation';
 import Header from './components/Headers/HeaderDashboard';
 import Projects from './pages/Projects/Projects';
+import Graphs from './pages/Graphs/Graphs';
+import NewGraph from './pages/NewGraph/NewGraph';
 
 import './global.css';
 function App() {
@@ -24,10 +26,12 @@ function App() {
                 <Layout>
                     <Header />
                     <Navigation />
+                    <Route exact path="/graphs" component={Graphs} />
                     <Route exact path="/projects" component={Projects} />
                     <Route exact path="/team" component={TeamUsers} />
                     <Route exact path="/user/new" component={NewUser} />
                     <Route exact path="/users/:userId/edit" component={EditUser} />
+                    <Route exact path="/graph/new" component={NewGraph} />
                 </Layout>
             </Switch>
         </BrowserRouter>
