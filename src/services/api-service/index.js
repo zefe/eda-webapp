@@ -1,5 +1,6 @@
 import 'whatwg-fetch';
 
+const uri = 'https://eda-api.herokuapp.com/api/user/';
 export function signUp(user) {
     const options = {
         method: 'POST',
@@ -8,17 +9,17 @@ export function signUp(user) {
             'Content-Type': 'application/json'
         }
     }
-    return fetch('http://localhost:3000/api/user/', options)
+    return fetch(uri, options)
         .then(response => response.json())
 }
 
 export function getUsers() {
-    return fetch('http://localhost:3000/api/user/')
+    return fetch(uri)
         .then(response => response.json())
 }
 //Get user details
 export function getUser(id, ) {
-    return fetch(`http://localhost:3000/api/user/${id}`)
+    return fetch(`${uri}${id}`)
         .then(response => response.json())
 }
 //Update user
@@ -30,7 +31,7 @@ export function updateUser(id, user) {
             'Content-Type': 'application/json'
         }
     }
-    return fetch(`http://localhost:3000/api/user/${id}`, options)
+    return fetch(`${uri}${id}`, options)
         .then(response => response.json())
 }
 
@@ -39,6 +40,6 @@ export function getUserInfo() {
     const options = {
         credentials: 'include'
     }
-    return fetch('http://localhost:3000/api/user/profile', options)
+    return fetch(`${uri}${id}profile`, options)
         .then(response => response.json())
 }
