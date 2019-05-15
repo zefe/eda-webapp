@@ -56,7 +56,7 @@ class NewUser extends Component {
                 </div>
                 <div className="row-graph">
                     <div className="container-graph">
-                        <h1>New Graph</h1>
+                        <h1>Add new graph to the project</h1>
                         <GraphForm
                             handleChange={this.handleChange}
                             formValues={this.state.form}
