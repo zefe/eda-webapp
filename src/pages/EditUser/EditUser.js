@@ -76,7 +76,7 @@ class EditUser extends Component {
             <div className="row-user">
                 <div className="edit-user-conatainer">
                     <div className="badge-content"><div className="badge-header">
-                        <h1>EDIT USER INFO</h1>
+                        <h1>Edit user information</h1>
                     </div>
                         <Badge
                             firstName={this.state.form.firstName}
