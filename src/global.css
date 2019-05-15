@@ -67,6 +67,13 @@ body {
     color: #fff;
     background-color: #1C8ADB;
     border-color: #1C8ADB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.90);
+    -moz-box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.90);
+    box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.90);
   }
   
   .btn.btn-primary:not(:disabled):not(.disabled):hover {

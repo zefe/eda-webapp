@@ -9,13 +9,14 @@ function Projects() {
                     <h2>Projects</h2>
                 </div>
                 <div className="team-button">
-                    <Link to="/project/new" className="btn btn-outline-primary">New prject</Link>
+                    <Link to="/project/new" className="btn btn-outline-primary">New Project</Link>
                 </div>
             </div>
             <div className="row-projects">
                 <div className="container-projects">
                     <h2>CREATE NEW PROJECT</h2>
-                    <button className="btn btn-outline-primary " >Create</button>
+                    <Link to="/project/new" className="btn btn-primary">New Project</Link>
+
                 </div>
             </div>
         </div>

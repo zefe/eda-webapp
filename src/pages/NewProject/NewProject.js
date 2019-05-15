@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import GraphForm from '../../components/GraphForm/GraphForm';
+import NewProjectForm from '../../components/NewProjectForm/NewProjectForm';
 import PageLoading from '../../components/Loading/Loading';
-import { newGraph } from '../../services/GraphService';
-import './NewGraph.css';
+//ADD SERVICES HERE
+import './NewProject.css';
 
-class NewUser extends Component {
+class NewProject extends Component {
     state = {
         loading: false,
         error: null,
         form: {
-            title: '',
-            description: '',
-            path: '',
+            project: ''
         }
     }
 
@@ -29,17 +27,17 @@ class NewUser extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState({ loading: true, error: null })
-        newGraph(this.state.form)
-            .then((response) => {
-                console.log(response)
-                this.setState({ loading: false });
-                this.props.history.push('/graphs')
-            })
-            .catch((error) => {
-                console.log(error);
-                this.setState({ loading: false, error: error })
-                console.log
-            })
+        // newGraph(this.state.form)
+        //     .then((response) => {
+        //         console.log(response)
+        //         this.setState({ loading: false });
+        //         this.props.history.push('/graphs')
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //         this.setState({ loading: false, error: error })
+        //         console.log
+        //     })
     }
 
 
@@ -54,10 +52,10 @@ class NewUser extends Component {
 
                     </div>
                 </div>
-                <div className="row-graph">
-                    <div className="container-graph">
-                        <h1>New Graph</h1>
-                        <GraphForm
+                <div className="row-projects">
+                    <div className="container-projects">
+                        <h1>New project</h1>
+                        <NewProjectForm
                             handleChange={this.handleChange}
                             formValues={this.state.form}
                             handleSubmit={this.handleSubmit}
@@ -66,8 +64,9 @@ class NewUser extends Component {
                     </div>
                 </div>
             </div>
+
         )
     }
 }
 
-export default NewUser;
+export default NewProject;

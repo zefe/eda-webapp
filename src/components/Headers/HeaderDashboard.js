@@ -9,7 +9,7 @@ function Header(props) {
         <div className="container-header">
             <div className="header">
                 <div className="header-logo">
-                    <Link to="/" className="navbar_brand">
+                    <Link to="/projects" className="navbar_brand">
                         <img src={logo} alt="logo" />
                         <h1>EDA</h1>
                     </Link>

@@ -28,6 +28,16 @@ function GraphForm(props) {
                     required
                 />
             </div>
+            <div className="form-group file">
+                <label htmlFor="">FILE</label>
+                <input
+                    type="file"
+                    name="file"
+                    id="file"
+                    placeholder="file"
+                    required
+                />
+            </div>
             <div className="form-button">
                 <button className="btn btn-primary">Create</button>
             </div>
