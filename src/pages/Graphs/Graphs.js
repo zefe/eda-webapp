@@ -14,38 +14,35 @@ class Graphs extends Component {
                         <h2>Graphs</h2>
                     </div>
                     <div className="graphs-button">
-                        <Link to="/graph/new" className="btn btn-outline-primary">New Graph</Link>
+                        <Link to="/graph/new" className="btn btn-outline-primary">New file</Link>
                     </div>
                 </div>
-                <div className="table-container">
-                    <div className="list">
+                <div className="list-graphs-container">
+                    <div className="list-content">
                         <div className="card-item-g" >
-                            <figure className="card-image-g">
-                                <img src={Graph1} alt="" width={200} height={200} />
+                            <div className="card-image-g">
+                                <Link to="/graph/new" >
+                                    <div className="empty-graph">
+                                        <p>
+                                            NEW FILE
+                                    </p>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="card-item-g" >
+                            <div className="card-image-g">
+                                <img src={Graph1} width={250} height={250} />
                                 <p>TITLE</p>
                                 <span className="card-name" >Description </span>
-                            </figure>
+                            </div>
                         </div>
                         <div className="card-item-g" >
-                            <figure className="card-image-g">
-                                <img src={Graph2} alt="" width={200} height={200} />
+                            <div className="card-image-g">
+                                <img src={Graph2} width={250} height={250} />
                                 <p>TITLE</p>
-                                <span className="card-name-g" >Description</span>
-                            </figure>
-                        </div>
-                        <div className="card-item-g" >
-                            <figure className="card-image-g">
-                                <img src={Graph1} alt="" width={200} height={200} />
-                                <p>TITLE</p>
-                                <span className="card-name-g" >Description </span>
-                            </figure>
-                        </div>
-                        <div className="card-item-g" >
-                            <figure className="card-image-g">
-                                <img src={Graph2} alt="" width={200} height={200} />
-                                <p>TITLE</p>
-                                <span className="card-name-g" >Description</span>
-                            </figure>
+                                <span className="card-name" >Description </span>
+                            </div>
                         </div>
                     </div>
                 </div>
