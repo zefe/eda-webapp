@@ -26,6 +26,12 @@ body {
     color: #172B4D;
     background: #fff;
   }
+
+  .form-background {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 5px;
+}
   
   .btn {
     width: 200px;

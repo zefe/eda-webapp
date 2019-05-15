@@ -4,7 +4,7 @@ import './NewProjectForm.css';
 
 function NewProjectForm(props) {
     return (
-        <form action="" onSubmit={props.handleSubmit}>
+        <form action="" onSubmit={props.handleSubmit} className="form-background">
             <div className="form-group">
                 <label htmlFor="">Project name</label>
                 <input

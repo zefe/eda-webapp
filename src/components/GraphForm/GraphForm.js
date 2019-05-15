@@ -3,7 +3,7 @@ import './GraphForm.css';
 
 function GraphForm(props) {
     return (
-        <form action="" onSubmit={props.handleSubmit}>
+        <form action="" onSubmit={props.handleSubmit} className="form-background">
             <div className="form-group">
                 <label htmlFor="">TITLE</label>
                 <input
