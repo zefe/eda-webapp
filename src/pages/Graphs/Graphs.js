@@ -8,7 +8,7 @@ class Graphs extends Component {
             <div>
                 <div className="graphs-container">
                     <div className="graphs-title">
-                        <h2>Manage your docs of your proyect</h2>
+                        <h2>Graphs</h2>
                     </div>
                     <div className="graphs-button">
                         <Link to="/graph/new" className="btn btn-outline-primary">New Graph</Link>

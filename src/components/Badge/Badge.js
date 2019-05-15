@@ -9,9 +9,9 @@ function Badge(props) {
 
             <div className="badge-section-name">
                 <Gravatar className="badge-avatar" email={props.email} />
-                <h1>
+                <h3>
                     {props.firstName} <br /> {props.lastName}
-                </h1>
+                </h3>
             </div>
 
             <div className="badge-section-info">
