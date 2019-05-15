@@ -20,31 +20,31 @@ class Graphs extends Component {
                 <div className="table-container">
                     <div className="list">
                         <div className="card-item-g" >
-                            <figure className="card-image">
+                            <figure className="card-image-g">
                                 <img src={Graph1} alt="" width={200} height={200} />
                                 <p>TITLE</p>
                                 <span className="card-name" >Description </span>
                             </figure>
                         </div>
                         <div className="card-item-g" >
-                            <figure className="card-image">
+                            <figure className="card-image-g">
                                 <img src={Graph2} alt="" width={200} height={200} />
                                 <p>TITLE</p>
-                                <span className="card-name" >Description</span>
+                                <span className="card-name-g" >Description</span>
                             </figure>
                         </div>
                         <div className="card-item-g" >
-                            <figure className="card-image">
+                            <figure className="card-image-g">
                                 <img src={Graph1} alt="" width={200} height={200} />
                                 <p>TITLE</p>
-                                <span className="card-name" >Description </span>
+                                <span className="card-name-g" >Description </span>
                             </figure>
                         </div>
                         <div className="card-item-g" >
-                            <figure className="card-image">
+                            <figure className="card-image-g">
                                 <img src={Graph2} alt="" width={200} height={200} />
                                 <p>TITLE</p>
-                                <span className="card-name" >Description</span>
+                                <span className="card-name-g" >Description</span>
                             </figure>
                         </div>
                     </div>
