@@ -1,0 +1,35 @@
+
+.team-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    margin-top: 50px;
+}
+.team-title {
+    width: 40%;
+}
+.team-button {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.list {
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    background: rgba(28, 138, 219, 0.06);
+}
+
+

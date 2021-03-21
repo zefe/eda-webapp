@@ -1,0 +1,85 @@
+
+.graphs-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    margin-top: 50px;
+}
+.graphs-title {
+    width: 40%;
+}
+.graphs-button {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+
+.list-graphs-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.list-content {
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    background: rgba(28, 138, 219, 0.06);
+}
+
+
+
+
+/*CARDS*/
+
+
+  .card-item-g {
+    padding: 5px;
+    width: 300px;
+    height: 360px;
+    margin: 10px;
+    cursor: pointer;
+    display: block;  
+    border-radius: 5px;
+      
+    -webkit-box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.25);
+    -moz-box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.25);
+    box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.25);
+  }
+
+  .empty-graph {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(28, 138, 219, 0.46);
+      width: 300px;
+    height: 360px;
+  }
+  .card-image-g a {
+      text-decoration: none;
+      color: #172B4D;
+      font-family: 'Roboto', sans-serif;
+}
+
+  .card-item-g:hover {
+      border: 1px solid #172B4D;
+  }
+
+  .card-image-g {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color:  #172B4D; 
+  }
+
+  
+
+ 

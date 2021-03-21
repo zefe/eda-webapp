@@ -1,0 +1,18 @@
+.row-projects {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container-projects{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;  
+    background: rgba(28, 138, 219, 0.46);
+    flex-direction: column;
+}
+
+.container-projects h2 {
+    margin-bottom: 100px;   
+}

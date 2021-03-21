@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    border: 0;
+    margin: 0;
+    color: #172B4D;
+  }
+  label {
+    color: #172B4D;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  input {
+    width: 320px;
+    height: 32px;
+    margin: 10px 0;
+    text-shadow: none;
+    padding: 0 10px;
+    border: 1px solid #8C96A9;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #172B4D;
+    background: #fff;
+  }
+
+  .form-background {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 5px;
+}
+  
+  .btn {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  /** Button Primary Outline*/
+  .btn.btn-outline-primary {
+    color: #1C8ADB;
+    background-color: #fff;
+    border-color: #1C8ADB;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .btn.btn-outline-primary:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    background-color: #1C8ADB;
+    border-color: #1C8ADB;
+  }
+  
+  .btn.btn-outline-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #1C8ADB;
+    border-color: #1C8ADB;
+  }
+  
+  .btn.btn-outline-primary:not(:disabled):not(.disabled):focus {
+    box-shadow: 0000.2remrgba(125, 205, 64, 0.5);
+  }
+
+  /*** Button Primary  **/
+  .btn.btn-primary {
+    color: #fff;
+    background-color: #1C8ADB;
+    border-color: #1C8ADB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.90);
+    -moz-box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.90);
+    box-shadow: 2px 2px 9px -1px rgba(28, 138, 219, 0.90);
+  }
+  
+  .btn.btn-primary:not(:disabled):not(.disabled):hover {
+    color: #1C8ADB;
+    background-color: #fff;
+    border-color: #1C8ADB;
+  }
+  
+  .btn.btn-primary:not(:disabled):not(.disabled):active {
+    color: #1C8ADB;
+    background-color: #fff;
+    border-color: #1C8ADB;
+  }
+  
+  .btn.btn-primary:not(:disabled):not(.disabled):focus {
+    box-shadow: 0000.2remrgba(125, 205, 64, 0.5);
+  }
+  
+
+  @media (max-width: 768px) {
+    .btn {
+      border-radius: 10px;
+      font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+  input {
+    width: 300px;
+  }
+}

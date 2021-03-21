@@ -1,0 +1,15 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.form-group.file input{
+    border: none;
+}
+
+.form-button {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
